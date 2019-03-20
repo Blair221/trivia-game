@@ -10,15 +10,14 @@ $(function() {
     number--;
     $("#timer").html("Time left: " + "<span>" + number + "</span>");
 
-    
     if (number === 0) {
-      stop();
-      $('#timer').html("Time's up!");
+      showResults();
+      $("#timer").html("Time's up!");
     }
   }
   function stop() {
     clearInterval(intervalId);
-    showResults();
+    
   }
   var quizContainer = document.getElementById("quiz");
   var resultsContainer = $("#results");
@@ -86,8 +85,9 @@ $(function() {
       correctAnswer: "b"
     }
   ];
-console.log(triviaQuestions[5].answers.b)
-submitButton.hide();
+  console.log(triviaQuestions[5].answers.b);
+  submitButton.hide();
+
   function buildQuiz() {
     run();
     startButton.hide();
@@ -124,10 +124,10 @@ submitButton.hide();
 
     triviaQuestions.forEach((currentQuestion, questionNumber) => {
       var answerContainer = answerContainers[questionNumber];
-      console.log(answerContainer);
+      
 
       var selector = `input[name=question${questionNumber}]:checked`;
-      console.log(selector);
+      
 
       var userAnswer = (answerContainer.querySelector(selector) || {}).value;
 
@@ -140,13 +140,11 @@ submitButton.hide();
       }
     });
     resultsContainer.html(numCorrect + " out of " + triviaQuestions.length);
-  
+    stop();
+    submitButton.hide()
   }
 
-  
-
   startButton.on("click", buildQuiz);
-
 
   submitButton.on("click", showResults);
 });
