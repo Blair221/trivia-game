@@ -1,0 +1,22 @@
+body {
+    text-align: center;
+}
+#header {
+    background-color: blue;
+    color: white;
+    margin: 0;
+}
+.question {
+font-weight: bolder;
+font-size: 18px;
+margin-bottom: 20px;    
+}
+.answers {
+margin-bottom: 10px;
+}
+span {
+    font-weight: bolder;
+}
+#results {
+    margin-top: 10px;
+}
