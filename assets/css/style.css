@@ -1,22 +1,27 @@
 body {
-    text-align: center;
+  text-align: center;
+  background: url("/assets/images/thistle3.jpg");
+  background-size: cover;
 }
 #header {
-    background-color: blue;
-    color: white;
-    margin: 0;
+  background-color: blue;
+  color: white;
+  margin: 0;
 }
 .question {
-font-weight: bolder;
-font-size: 18px;
-margin-bottom: 20px;    
+  font-weight: bolder;
+  font-size: 18px;
+  margin-bottom: 20px;
 }
 .answers {
-margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 span {
-    font-weight: bolder;
+  font-weight: bolder;
 }
 #results {
-    margin-top: 10px;
+  margin-top: 10px;
+}
+.jumbotron {
+  
 }

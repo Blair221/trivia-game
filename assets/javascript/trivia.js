@@ -12,7 +12,7 @@ $(function() {
 
     if (number === 0) {
       showResults();
-      $("#timer").html("Time's up!");
+      $("#timer").html("<h2><em>Time's up!</em></h2>");
     }
   }
   function stop() {
@@ -102,7 +102,8 @@ $(function() {
               <input type="radio" name="question${questionNumber}" value="${letter}">
               ${letter} :
               ${currentQuestion.answers[letter]}
-            </label>`
+            </label>
+            <hr/>`
         );
       }
 
@@ -134,9 +135,9 @@ $(function() {
       if (userAnswer === currentQuestion.correctAnswer) {
         numCorrect++;
 
-        answerContainers[questionNumber].style.color = "lightgreen";
+        answerContainers[questionNumber].style.color = "blue";
       } else {
-        answerContainers[questionNumber].style.color = "red";
+        answerContainers[questionNumber].style.color = "purple";
       }
     });
     resultsContainer.html(numCorrect + " out of " + triviaQuestions.length);

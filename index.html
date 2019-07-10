@@ -1,24 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <div><h1>Scotland Trivia</h1></div>
-    <button id="start">Start the quiz!</button>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Scotland Trivia</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Scotland Trivia</h1>
+      <hr/>
+      <h3>Try your hand at Scottish trivia! Correct answers will show blue and wrong answers will appear purple!</h3>
+    </div>
+    <button id="start" class="btn btn-primary">Start the quiz!</button>
     <div id="timer"></div>
     <div id="quiz"></div>
-    <button id="submit">Submit Quiz</button>
+    <button id="submit" class="btn btn-outline-primary">Submit Quiz</button>
     <div id="results"></div>
-    <script src="assets/javascript/trivia.js"></script>
-  </body>
+  </div>
+  <script src="assets/javascript/trivia.js"></script>
+</body>
+
 </html>
