@@ -2,10 +2,12 @@ $(function() {
   var output = [];
   var number = 25;
   var intervalId;
+
   function run() {
     clearInterval(intervalId);
     intervalId = setInterval(decrement, 1000);
   }
+
   function decrement() {
     number--;
     $("#timer").html("Time left: " + "<span>" + number + "</span>");
@@ -113,8 +115,11 @@ $(function() {
           <div class="answers"> ${answers.join("")} </div>`
       );
     });
+
     quizContainer.innerHTML = output.join("");
+
     var timerDiv = $("#timer");
+    
     timerDiv.html("Time left: " + "<span>" + number + "</span>");
   }
 
